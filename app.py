@@ -5,12 +5,12 @@ import geopandas as gpd
 import pandas as pd
 from datetime import date
 
-zones = pd.read_csv("../Data/taxi_zone_lookup.csv")
-taxi_zones = gpd.read_file('../Data/taxi_zones_final.shp')
-yellow_pickup_counts = pd.read_parquet('../Data/yellow_pickup_counts.parquet')
-yellow_dropoff_counts = pd.read_parquet('../Data/yellow_dropoff_counts.parquet')
-green_pickup_counts = pd.read_parquet('../Data/green_pickup_counts.parquet')
-green_dropoff_counts = pd.read_parquet('../Data/green_dropoff_counts.parquet')
+zones = pd.read_csv("Data/taxi_zone_lookup.csv")
+taxi_zones = gpd.read_file('Data/taxi_zones_final.shp')
+yellow_pickup_counts = pd.read_parquet('Data/yellow_pickup_counts.parquet')
+yellow_dropoff_counts = pd.read_parquet('Data/yellow_dropoff_counts.parquet')
+green_pickup_counts = pd.read_parquet('Data/green_pickup_counts.parquet')
+green_dropoff_counts = pd.read_parquet('Data/green_dropoff_counts.parquet')
 
 yellow_pickup_counts['date'] = pd.to_datetime(yellow_pickup_counts['date'])
 yellow_dropoff_counts['date'] = pd.to_datetime(yellow_dropoff_counts['date'])
